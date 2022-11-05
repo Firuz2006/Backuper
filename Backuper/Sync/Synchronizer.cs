@@ -28,5 +28,8 @@ internal class Synchronizer
         Properties.FilesDirectory = Environment.CurrentDirectory;
         // Properties.IgnoredDirectories = EnvironmentWork.GetIgnoredDir();
 
+        Properties.LogPath = Properties.PropertiesDir + "MainLog.log";
+        if (!File.Exists(Properties.LogPath))
+            File.Create(Properties.LogPath);
     }
 }
